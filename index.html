@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text To Speech</title>
+    <style>
+        body {
+            background-image: url(Bg.jpg);
+            background-size: cover;
+        }
+
+        #ts {
+
+            background-color: antiquewhite;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-top: 100px;
+            margin-left: 200px;
+            height: 200px;
+            width: 300px;
+            box-shadow: 5px 5px 10px black;
+            float: left;
+            border-radius: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #000;
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script type="text/javascript" src="https://code.responsivevoice.org/responsivevoice.js"></script>
+
+    <div id="ts">
+        <h1>Text To Speech</h1>
+        <input type="text" id="text" name="text"><br><br>
+        <input type="button" class="btn" onclick="texttospeech()" value="submit">
+    </div>
+    <script>
+        function texttospeech() {
+            var text = document.getElementById("text").value;
+            responsiveVoice.speak(text);
+
+        }
+    </script>
+</body>
+
+</html>
